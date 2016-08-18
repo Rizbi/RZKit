@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FadeDemoViewController.swift
 //  RZKit Example
 //
 //  Created by Rizbi on 8/18/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class FadeDemoViewController: UIViewController
 {
     @IBOutlet var rzView: RZView?
     @IBOutlet var rzTextField: RZTextField?
@@ -22,6 +22,7 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.title = "Fade"
     }
 
     override func didReceiveMemoryWarning()

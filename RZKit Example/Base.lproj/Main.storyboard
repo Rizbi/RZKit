@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="heY-Te-2Sw">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="HMF-5h-f9m">
+            <objects>
+                <navigationController id="heY-Te-2Sw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z6s-aG-1zy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Tq3-SE-dQu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h14-FY-1Lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-795" y="55"/>
+        </scene>
+        <!--Fade Demo View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RZKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FadeDemoViewController" customModule="RZKit_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkH-s3-qGx" userLabel="Rounded View" customClass="RZView" customModule="RZKit_Example" customModuleProvider="target">
-                                <rect key="frame" x="150" y="8" width="300" height="96"/>
+                                <rect key="frame" x="150" y="52" width="300" height="96"/>
                                 <color key="backgroundColor" red="0.36626285629999999" green="0.77333221839999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="815-A3-vqT"/>
@@ -37,7 +53,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TextField" borderStyle="bezel" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="4gb-OK-zlp" customClass="RZTextField" customModule="RZKit_Example" customModuleProvider="target">
-                                <rect key="frame" x="150" y="120" width="300" height="40"/>
+                                <rect key="frame" x="150" y="164" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="X8j-eA-rLO"/>
                                     <constraint firstAttribute="height" constant="40" id="fnC-of-PqB"/>
@@ -57,10 +73,10 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="TextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lnc-HL-HE9" customClass="RZTextView" customModule="RZKit_Example" customModuleProvider="target">
-                                <rect key="frame" x="150" y="176" width="300" height="160"/>
+                                <rect key="frame" x="150" y="220" width="300" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="Jqj-Ee-X4t"/>
+                                    <constraint firstAttribute="height" constant="120" id="Jqj-Ee-X4t"/>
                                     <constraint firstAttribute="width" constant="300" id="lY4-9p-Mrb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -78,7 +94,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Us-G6-XBF" customClass="RZLabel" customModule="RZKit_Example" customModuleProvider="target">
-                                <rect key="frame" x="150" y="352" width="300" height="40"/>
+                                <rect key="frame" x="150" y="356" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="hDH-Dp-B3o"/>
                                     <constraint firstAttribute="width" constant="300" id="w4D-i8-Yib"/>
@@ -196,10 +212,17 @@
                                 <real key="value" value="2"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                <color key="value" red="0.36626285629999999" green="0.77333221839999999" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.36470588235294116" green="0.77254901960784317" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <navigationItem key="navigationItem" id="fhH-eH-Q16">
+                        <barButtonItem key="rightBarButtonItem" title="Scale" id="3gO-ub-c1j">
+                            <connections>
+                                <segue destination="ANW-ft-hh2" kind="show" id="mHp-Df-fr2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="rzButtonFadeIn" destination="Ccl-RU-1s4" id="SZj-Tl-z8b"/>
@@ -213,7 +236,148 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="280" y="399"/>
+            <point key="canvasLocation" x="-50" y="55"/>
+        </scene>
+        <!--Scale Demo View Controller-->
+        <scene sceneID="ahD-mx-9n6">
+            <objects>
+                <viewController id="ANW-ft-hh2" customClass="ScaleDemoViewController" customModule="RZKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ft6-D8-vit"/>
+                        <viewControllerLayoutGuide type="bottom" id="9bj-d5-dc3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ql9-nw-YAs" customClass="RZView" customModule="RZKit_Example" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q07-eo-YNc" userLabel="Rounded View" customClass="RZView" customModule="RZKit_Example" customModuleProvider="target">
+                                <rect key="frame" x="150" y="252" width="300" height="96"/>
+                                <color key="backgroundColor" red="1" green="0.70392937570000003" blue="0.18323301519999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="H0C-eX-e1Y"/>
+                                    <constraint firstAttribute="height" constant="96" id="d6f-QY-h90"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.35294117650000001" green="0.7843137255" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7c-Ye-act" customClass="RZButton" customModule="RZKit_Example" customModuleProvider="target">
+                                <rect key="frame" x="8" y="558" width="80" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="DW1-kn-BJg"/>
+                                    <constraint firstAttribute="height" constant="34" id="cqr-TN-Sej"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                <state key="normal" title="Scale Up"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startFadeOutAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hsn-pf-S8R"/>
+                                    <action selector="startScaleUpAnimation:" destination="ANW-ft-hh2" eventType="touchUpInside" id="7P2-IE-p6f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAG-lm-vk9" customClass="RZButton" customModule="RZKit_Example" customModuleProvider="target">
+                                <rect key="frame" x="502" y="558" width="90" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="8cB-ZN-xpZ"/>
+                                    <constraint firstAttribute="height" constant="34" id="M1E-3E-8m0"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                <state key="normal" title="Scale Down"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startScaleDownAnimation:" destination="ANW-ft-hh2" eventType="touchUpInside" id="aZq-I3-KNA"/>
+                                    <action selector="startSequenceAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FBH-yd-2yN"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="0.5" borderStyle="bezel" placeholder="Duration" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="wRh-68-bvU" customClass="RZTextField" customModule="RZKit_Example" customModuleProvider="target">
+                                <rect key="frame" x="8" y="52" width="584" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="t78-G9-7mX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" keyboardAppearance="light" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="ANW-ft-hh2" id="EOP-kS-8z0"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9bj-d5-dc3" firstAttribute="top" secondItem="qAG-lm-vk9" secondAttribute="bottom" constant="8" id="0VY-a0-sQa"/>
+                            <constraint firstItem="9bj-d5-dc3" firstAttribute="top" secondItem="j7c-Ye-act" secondAttribute="bottom" constant="8" id="CMQ-WC-f5c"/>
+                            <constraint firstAttribute="trailing" secondItem="qAG-lm-vk9" secondAttribute="trailing" constant="8" id="P84-AH-fDD"/>
+                            <constraint firstItem="j7c-Ye-act" firstAttribute="leading" secondItem="ql9-nw-YAs" secondAttribute="leading" constant="8" id="YAS-XK-zMw"/>
+                            <constraint firstItem="Q07-eo-YNc" firstAttribute="centerX" secondItem="ql9-nw-YAs" secondAttribute="centerX" id="YYa-gs-vbO"/>
+                            <constraint firstItem="wRh-68-bvU" firstAttribute="top" secondItem="ft6-D8-vit" secondAttribute="bottom" constant="8" id="cWS-6I-Jk6"/>
+                            <constraint firstItem="Q07-eo-YNc" firstAttribute="centerY" secondItem="ql9-nw-YAs" secondAttribute="centerY" id="eqq-SL-Id8"/>
+                            <constraint firstAttribute="trailing" secondItem="wRh-68-bvU" secondAttribute="trailing" constant="8" id="gH7-zo-2QX"/>
+                            <constraint firstItem="wRh-68-bvU" firstAttribute="leading" secondItem="ql9-nw-YAs" secondAttribute="leading" constant="8" id="r5k-NJ-OKc"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.36470588240000001" green="0.7725490196" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="iQd-Ew-oHF">
+                        <barButtonItem key="rightBarButtonItem" title="Anchor" id="IxK-WI-r2d">
+                            <connections>
+                                <action selector="setAnchor:" destination="ANW-ft-hh2" id="gSy-Jw-Q7G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="durationField" destination="wRh-68-bvU" id="vcs-JN-OAp"/>
+                        <outlet property="rzButtonScaleDown" destination="qAG-lm-vk9" id="OqM-qU-w82"/>
+                        <outlet property="rzButtonScaleUp" destination="j7c-Ye-act" id="m4L-Hp-YTh"/>
+                        <outlet property="rzView" destination="Q07-eo-YNc" id="cCS-OH-LAo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MLG-8D-9sz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="55"/>
         </scene>
     </scenes>
 </document>

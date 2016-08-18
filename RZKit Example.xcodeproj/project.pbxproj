@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C3A537CC1D658BF200A57B93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A537CB1D658BF200A57B93 /* AppDelegate.swift */; };
-		C3A537CE1D658BF200A57B93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A537CD1D658BF200A57B93 /* ViewController.swift */; };
+		C3A537CE1D658BF200A57B93 /* FadeDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A537CD1D658BF200A57B93 /* FadeDemoViewController.swift */; };
 		C3A537D11D658BF200A57B93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A537CF1D658BF200A57B93 /* Main.storyboard */; };
 		C3A537D31D658BF200A57B93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A537D21D658BF200A57B93 /* Assets.xcassets */; };
 		C3A537D61D658BF200A57B93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A537D41D658BF200A57B93 /* LaunchScreen.storyboard */; };
@@ -22,12 +22,13 @@
 		C3A537EF1D658C7500A57B93 /* RZTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A537E51D658C7500A57B93 /* RZTextView.swift */; };
 		C3A537F01D658C7500A57B93 /* RZVersions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A537E61D658C7500A57B93 /* RZVersions.swift */; };
 		C3A537F11D658C7500A57B93 /* RZView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A537E71D658C7500A57B93 /* RZView.swift */; };
+		C3A537F71D65AC7B00A57B93 /* ScaleDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A537F61D65AC7B00A57B93 /* ScaleDemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C3A537C81D658BF200A57B93 /* RZKit Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RZKit Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A537CB1D658BF200A57B93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C3A537CD1D658BF200A57B93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C3A537CD1D658BF200A57B93 /* FadeDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeDemoViewController.swift; sourceTree = "<group>"; };
 		C3A537D01D658BF200A57B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3A537D21D658BF200A57B93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3A537D51D658BF200A57B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +47,7 @@
 		C3A537F31D658C7C00A57B93 /* Example2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Example2.png; sourceTree = SOURCE_ROOT; };
 		C3A537F41D658C7C00A57B93 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		C3A537F51D658C7C00A57B93 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		C3A537F61D65AC7B00A57B93 /* ScaleDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleDemoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +86,8 @@
 				C3A537F41D658C7C00A57B93 /* LICENSE */,
 				C3A537F51D658C7C00A57B93 /* README.md */,
 				C3A537CB1D658BF200A57B93 /* AppDelegate.swift */,
-				C3A537CD1D658BF200A57B93 /* ViewController.swift */,
+				C3A537CD1D658BF200A57B93 /* FadeDemoViewController.swift */,
+				C3A537F61D65AC7B00A57B93 /* ScaleDemoViewController.swift */,
 				C3A537CF1D658BF200A57B93 /* Main.storyboard */,
 				C3A537D21D658BF200A57B93 /* Assets.xcassets */,
 				C3A537D41D658BF200A57B93 /* LaunchScreen.storyboard */,
@@ -185,7 +188,8 @@
 				C3A537F01D658C7500A57B93 /* RZVersions.swift in Sources */,
 				C3A537EB1D658C7500A57B93 /* RZAnimationSequence.swift in Sources */,
 				C3A537EA1D658C7500A57B93 /* RZAnimationScale.swift in Sources */,
-				C3A537CE1D658BF200A57B93 /* ViewController.swift in Sources */,
+				C3A537CE1D658BF200A57B93 /* FadeDemoViewController.swift in Sources */,
+				C3A537F71D65AC7B00A57B93 /* ScaleDemoViewController.swift in Sources */,
 				C3A537ED1D658C7500A57B93 /* RZLabel.swift in Sources */,
 				C3A537F11D658C7500A57B93 /* RZView.swift in Sources */,
 				C3A537CC1D658BF200A57B93 /* AppDelegate.swift in Sources */,

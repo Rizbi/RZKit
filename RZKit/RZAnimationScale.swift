@@ -21,16 +21,26 @@
 
 import UIKit
 
+enum RZAnimationScaleAnchor: Int
+{
+    case Default, Center
+    case LeftTop
+    case LeftBottom
+    case RightTop
+    case RightBottom
+}
 
 class RZAnimationScale: RZAnimation
 {
     var percent: CGFloat = 50.0
+    var anchor: RZAnimationScaleAnchor = RZAnimationScaleAnchor.Default
     
-    init(view: UIView, duration: NSTimeInterval, percent: CGFloat)
+    init(view: UIView, duration: NSTimeInterval, percent: CGFloat, anchor: RZAnimationScaleAnchor = RZAnimationScaleAnchor.Default)
     {
         super.init(view: view, duration: duration)
         
         self.percent = percent
+        self.anchor = anchor
     }
     
     override func start()
@@ -39,11 +49,10 @@ class RZAnimationScale: RZAnimation
             return
         }
         
+        
         self.animating = true
         
-        var frame = self.view.frame
-        frame.size.width = ((frame.size.width * self.percent) / 100.0)
-        frame.size.height = ((frame.size.height * self.percent) / 100.0)
+        let frame = self.getNewFrame()
         
         UIView.animateWithDuration(self.duration, animations: {
             self.view.frame = frame
@@ -59,5 +68,41 @@ class RZAnimationScale: RZAnimation
                 }
             }
         }
+    }
+    
+    private func getNewFrame() -> CGRect
+    {
+        let frame = self.view.frame
+        let newWidth = ((frame.size.width * self.percent) / 100.0)
+        let newHeight = ((frame.size.height * self.percent) / 100.0)
+        var newX = frame.origin.x
+        var newY = frame.origin.y
+        
+        switch self.anchor
+        {
+        case RZAnimationScaleAnchor.LeftTop: break
+            
+        case RZAnimationScaleAnchor.LeftBottom:
+            let y = newHeight - frame.size.height
+            newY -= y
+            
+        case RZAnimationScaleAnchor.RightTop:
+            let w = newWidth - frame.size.width
+            newX -= w
+            
+        case RZAnimationScaleAnchor.RightBottom:
+            let y = newHeight - frame.size.height
+            newY -= y
+            let w = newWidth - frame.size.width
+            newX -= w
+            
+        default:
+            let y = newHeight - frame.size.height
+            newY -= (y/2.0)
+            let w = newWidth - frame.size.width
+            newX -= (w/2.0)
+        }
+        
+        return CGRectMake(newX, newY, newWidth, newHeight)
     }
 }
