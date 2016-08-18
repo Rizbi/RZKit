@@ -25,7 +25,8 @@ import UIKit
 class RZAnimation
 {
     var view = UIView()
-    var animating: Bool = false
+    final var animating: Bool = false
+    
     var duration: NSTimeInterval = 0.0
     var completionHandler:((RZAnimation)->Void)!
     
@@ -34,6 +35,8 @@ class RZAnimation
         self.view = view
         self.duration = duration
     }
+    
+    // start doesnot call end except subclasses
     
     func start()
     {
@@ -45,15 +48,20 @@ class RZAnimation
         self.animating = true
     }
     
-    func end()
+    // this function should be called manually or from subclasses
+    
+    final func end()
     {
-        self.view.layer.removeAllAnimations()
-        
-        self.animating = false
-        
-        if (self.completionHandler != nil)
+        if self.animating
         {
-            self.completionHandler(self)
+            self.view.layer.removeAllAnimations()
+            
+            self.animating = false
+            
+            if (self.completionHandler != nil)
+            {
+                self.completionHandler(self)
+            }
         }
     }
 }
