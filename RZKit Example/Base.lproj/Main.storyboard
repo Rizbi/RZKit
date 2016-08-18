@@ -293,30 +293,6 @@
                                     <action selector="startScaleUpAnimation:" destination="ANW-ft-hh2" eventType="touchUpInside" id="7P2-IE-p6f"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAG-lm-vk9" customClass="RZButton" customModule="RZKit_Example" customModuleProvider="target">
-                                <rect key="frame" x="502" y="558" width="90" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="8cB-ZN-xpZ"/>
-                                    <constraint firstAttribute="height" constant="34" id="M1E-3E-8m0"/>
-                                </constraints>
-                                <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
-                                <state key="normal" title="Scale Down"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="startScaleDownAnimation:" destination="ANW-ft-hh2" eventType="touchUpInside" id="aZq-I3-KNA"/>
-                                    <action selector="startSequenceAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FBH-yd-2yN"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="0.5" borderStyle="bezel" placeholder="Duration" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="wRh-68-bvU" customClass="RZTextField" customModule="RZKit_Example" customModuleProvider="target">
                                 <rect key="frame" x="8" y="52" width="584" height="34"/>
                                 <constraints>
@@ -339,18 +315,68 @@
                                     <outlet property="delegate" destination="ANW-ft-hh2" id="EOP-kS-8z0"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAG-lm-vk9" customClass="RZButton" customModule="RZKit_Example" customModuleProvider="target">
+                                <rect key="frame" x="96" y="558" width="90" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="8cB-ZN-xpZ"/>
+                                    <constraint firstAttribute="height" constant="34" id="M1E-3E-8m0"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                <state key="normal" title="Scale Down"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startScaleDownAnimation:" destination="ANW-ft-hh2" eventType="touchUpInside" id="aZq-I3-KNA"/>
+                                    <action selector="startSequenceAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FBH-yd-2yN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQc-Y0-4PU" customClass="RZButton" customModule="RZKit_Example" customModuleProvider="target">
+                                <rect key="frame" x="512" y="558" width="80" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="N5g-Ye-xFh"/>
+                                    <constraint firstAttribute="height" constant="34" id="z7Y-L3-RwO"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                <state key="normal" title="Sequence"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startSequenceAnimation:" destination="ANW-ft-hh2" eventType="touchUpInside" id="9an-6l-4rg"/>
+                                    <action selector="startSequenceAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eXj-gl-HKe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9bj-d5-dc3" firstAttribute="top" secondItem="qAG-lm-vk9" secondAttribute="bottom" constant="8" id="0VY-a0-sQa"/>
                             <constraint firstItem="9bj-d5-dc3" firstAttribute="top" secondItem="j7c-Ye-act" secondAttribute="bottom" constant="8" id="CMQ-WC-f5c"/>
-                            <constraint firstAttribute="trailing" secondItem="qAG-lm-vk9" secondAttribute="trailing" constant="8" id="P84-AH-fDD"/>
+                            <constraint firstItem="qAG-lm-vk9" firstAttribute="leading" secondItem="j7c-Ye-act" secondAttribute="trailing" constant="8" id="DHy-br-rU3"/>
+                            <constraint firstItem="rQc-Y0-4PU" firstAttribute="centerY" secondItem="qAG-lm-vk9" secondAttribute="centerY" id="HYU-jK-qrx"/>
                             <constraint firstItem="j7c-Ye-act" firstAttribute="leading" secondItem="ql9-nw-YAs" secondAttribute="leading" constant="8" id="YAS-XK-zMw"/>
                             <constraint firstItem="Q07-eo-YNc" firstAttribute="centerX" secondItem="ql9-nw-YAs" secondAttribute="centerX" id="YYa-gs-vbO"/>
                             <constraint firstItem="wRh-68-bvU" firstAttribute="top" secondItem="ft6-D8-vit" secondAttribute="bottom" constant="8" id="cWS-6I-Jk6"/>
                             <constraint firstItem="Q07-eo-YNc" firstAttribute="centerY" secondItem="ql9-nw-YAs" secondAttribute="centerY" id="eqq-SL-Id8"/>
                             <constraint firstAttribute="trailing" secondItem="wRh-68-bvU" secondAttribute="trailing" constant="8" id="gH7-zo-2QX"/>
                             <constraint firstItem="wRh-68-bvU" firstAttribute="leading" secondItem="ql9-nw-YAs" secondAttribute="leading" constant="8" id="r5k-NJ-OKc"/>
+                            <constraint firstAttribute="trailing" secondItem="rQc-Y0-4PU" secondAttribute="trailing" constant="8" id="x6H-Dv-bsG"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">

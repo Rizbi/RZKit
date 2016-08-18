@@ -67,10 +67,11 @@ class FadeDemoViewController: UIViewController
             
             let fadeOut1 = RZAnimationFade(view: _view, duration: 0.5, to: 0.1)
             let fadeIn1 = RZAnimationFade(view: _view, duration: 0.5, to: 1.0)
+            let delay = RZAnimationDelay(delay: 0.25)
             let fadeOut2 = RZAnimationFade(view: _view, duration: 0.5, to: 0.1)
             let fadeIn2 = RZAnimationFade(view: _view, duration: 0.5, to: 1.0)
             
-            let seq = RZAnimationSequence(sequence: [fadeOut1, fadeIn1, fadeOut2, fadeIn2])
+            let seq = RZAnimationSequence(sequence: [fadeOut1, fadeIn1, delay, fadeOut2, fadeIn2])
             seq.completionHandler = self.animationFinished(_:)
             seq.start()
         }

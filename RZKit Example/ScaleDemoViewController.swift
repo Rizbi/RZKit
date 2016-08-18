@@ -15,6 +15,7 @@ class ScaleDemoViewController: UIViewController, UITextFieldDelegate
     
     @IBOutlet var rzButtonScaleUp: RZButton?
     @IBOutlet var rzButtonScaleDown: RZButton?
+    @IBOutlet var rzButtonSequence: RZButton?
     
     var anchor: RZAnimationScaleAnchor = RZAnimationScaleAnchor.Default
     
@@ -55,6 +56,29 @@ class ScaleDemoViewController: UIViewController, UITextFieldDelegate
         }
     }
     
+    @IBAction
+    private func startSequenceAnimation(sender: RZButton)
+    {
+        if let _view = self.rzView
+        {
+            // keep buttons disbled while an animation is in effect
+            // Not mandatory!
+            self.enableAllButtons(false)
+            
+            let scaleDown1 = RZAnimationScale(view: _view, duration: self.getAnimationDuration(), percent: 25.0, anchor: self.anchor)
+            let scaleUp1 = RZAnimationScale(view: _view, duration: self.getAnimationDuration(), percent: 400.0, anchor: self.anchor)
+            
+            let delay = RZAnimationDelay(delay: 0.25)
+            
+            let scaleDown2 = RZAnimationScale(view: _view, duration: self.getAnimationDuration(), percent: 25.0, anchor: self.anchor)
+            let scaleUp2 = RZAnimationScale(view: _view, duration: self.getAnimationDuration(), percent: 400.0, anchor: self.anchor)
+            
+            let seq = RZAnimationSequence(sequence: [scaleDown1, scaleUp1, delay, scaleDown2, scaleUp2])
+            seq.completionHandler = self.animationFinished(_:)
+            seq.start()
+        }
+    }
+    
     private func animationFinished(anim: RZAnimation)
     {
         self.enableAllButtons(true)
@@ -64,6 +88,7 @@ class ScaleDemoViewController: UIViewController, UITextFieldDelegate
     {
         self.rzButtonScaleUp?.enabled = enabled
         self.rzButtonScaleDown?.enabled = enabled
+        self.rzButtonSequence?.enabled = enabled
     }
     
     // MARK: - UITextFieldDelegate

@@ -37,7 +37,8 @@ class RZAnimation
     
     func start()
     {
-        if self.animating {
+        if self.animating
+        {
             return
         }
         
@@ -46,9 +47,12 @@ class RZAnimation
     
     func end()
     {
+        self.view.layer.removeAllAnimations()
+        
         self.animating = false
         
-        if self.completionHandler != nil {
+        if (self.completionHandler != nil)
+        {
             self.completionHandler(self)
         }
     }
