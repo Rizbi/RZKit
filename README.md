@@ -6,7 +6,7 @@
   - FadeIn & FadeOut animation support.
   - ZoomIn & ZoomOut animation support.
 
-# Classe
+# Classes
 RZView, RZLabel, RZTextField, RZTextView, RZAnimation, RZAnimationFade, RZAnimationScale, RZAnimationSequence.
 
 # Storyboard example
