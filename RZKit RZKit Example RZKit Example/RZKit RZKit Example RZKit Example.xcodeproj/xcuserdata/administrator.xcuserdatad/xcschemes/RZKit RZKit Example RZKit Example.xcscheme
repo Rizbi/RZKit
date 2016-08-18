@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C3A537591D656B6100A57B93"
-               BuildableName = "RZKit Example.app"
-               BlueprintName = "RZKit Example"
-               ReferencedContainer = "container:RZKit Example.xcodeproj">
+               BlueprintIdentifier = "C3A537901D6589D200A57B93"
+               BuildableName = "RZKit RZKit Example RZKit Example.app"
+               BlueprintName = "RZKit RZKit Example RZKit Example"
+               ReferencedContainer = "container:RZKit RZKit Example RZKit Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C3A537591D656B6100A57B93"
-            BuildableName = "RZKit Example.app"
-            BlueprintName = "RZKit Example"
-            ReferencedContainer = "container:RZKit Example.xcodeproj">
+            BlueprintIdentifier = "C3A537901D6589D200A57B93"
+            BuildableName = "RZKit RZKit Example RZKit Example.app"
+            BlueprintName = "RZKit RZKit Example RZKit Example"
+            ReferencedContainer = "container:RZKit RZKit Example RZKit Example.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C3A537591D656B6100A57B93"
-            BuildableName = "RZKit Example.app"
-            BlueprintName = "RZKit Example"
-            ReferencedContainer = "container:RZKit Example.xcodeproj">
+            BlueprintIdentifier = "C3A537901D6589D200A57B93"
+            BuildableName = "RZKit RZKit Example RZKit Example.app"
+            BlueprintName = "RZKit RZKit Example RZKit Example"
+            ReferencedContainer = "container:RZKit RZKit Example RZKit Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C3A537591D656B6100A57B93"
-            BuildableName = "RZKit Example.app"
-            BlueprintName = "RZKit Example"
-            ReferencedContainer = "container:RZKit Example.xcodeproj">
+            BlueprintIdentifier = "C3A537901D6589D200A57B93"
+            BuildableName = "RZKit RZKit Example RZKit Example.app"
+            BlueprintName = "RZKit RZKit Example RZKit Example"
+            ReferencedContainer = "container:RZKit RZKit Example RZKit Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
