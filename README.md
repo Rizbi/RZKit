@@ -9,6 +9,11 @@
 # Classes:
 RZView, RZLabel, RZTextField, RZTextView, RZAnimation, RZAnimationFade, RZAnimationScale, RZAnimationSequence.
 
+# Storyboard example
+<p align="left">
+  <img src="https://raw.githubusercontent.com/Rizbi/RZKit/branch/path/to/img.png" width="510" height="282" />
+</p>
+
 # Animation example in swift
 
         if let _label = self.label
