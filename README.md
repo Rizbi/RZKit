@@ -11,7 +11,8 @@ RZView, RZLabel, RZTextField, RZTextView, RZAnimation, RZAnimationFade, RZAnimat
 
 # Storyboard example
 <p align="left">
-  <img src="https://raw.githubusercontent.com/Rizbi/RZKit/branch/path/to/img.png" width="510" height="282" />
+  <img src="https://github.com/Rizbi/RZKit/blob/master/Example1.jpg" width="510" height="282" />
+  <img src="https://github.com/Rizbi/RZKit/blob/master/Example2.png" width="256" height="455" />
 </p>
 
 # Animation example in swift
