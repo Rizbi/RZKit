@@ -62,8 +62,8 @@
 		C3A537BF1D658BF200A57B93 = {
 			isa = PBXGroup;
 			children = (
-				C3A537DD1D658C7500A57B93 /* RZKit */,
 				C3A537CA1D658BF200A57B93 /* RZKit Example */,
+				C3A537DD1D658C7500A57B93 /* RZKit */,
 				C3A537C91D658BF200A57B93 /* Products */,
 			);
 			sourceTree = "<group>";
