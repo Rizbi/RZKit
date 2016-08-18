@@ -13,12 +13,12 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="RZView" customModule="RZKit_Example" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkH-s3-qGx" userLabel="Rounded View" customClass="RZView" customModule="RZKit_Example" customModuleProvider="target">
-                                <rect key="frame" x="150" y="36" width="300" height="96"/>
+                                <rect key="frame" x="150" y="8" width="300" height="96"/>
                                 <color key="backgroundColor" red="0.36626285629999999" green="0.77333221839999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="815-A3-vqT"/>
@@ -37,7 +37,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TextField" borderStyle="bezel" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="4gb-OK-zlp" customClass="RZTextField" customModule="RZKit_Example" customModuleProvider="target">
-                                <rect key="frame" x="150" y="148" width="300" height="40"/>
+                                <rect key="frame" x="150" y="120" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="X8j-eA-rLO"/>
                                     <constraint firstAttribute="height" constant="40" id="fnC-of-PqB"/>
@@ -57,7 +57,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="TextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lnc-HL-HE9" customClass="RZTextView" customModule="RZKit_Example" customModuleProvider="target">
-                                <rect key="frame" x="150" y="204" width="300" height="160"/>
+                                <rect key="frame" x="150" y="176" width="300" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="Jqj-Ee-X4t"/>
@@ -78,7 +78,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Us-G6-XBF" customClass="RZLabel" customModule="RZKit_Example" customModuleProvider="target">
-                                <rect key="frame" x="150" y="380" width="300" height="40"/>
+                                <rect key="frame" x="150" y="352" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="hDH-Dp-B3o"/>
                                     <constraint firstAttribute="width" constant="300" id="w4D-i8-Yib"/>
@@ -188,10 +188,19 @@
                             <constraint firstAttribute="trailing" secondItem="kOC-lV-7zp" secondAttribute="trailing" constant="8" id="brs-EB-ZId"/>
                             <constraint firstItem="DeV-KZ-i8V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="eCt-0i-fDn"/>
                             <constraint firstItem="Lnc-HL-HE9" firstAttribute="top" secondItem="4gb-OK-zlp" secondAttribute="bottom" constant="16" id="mKZ-T0-v3x"/>
-                            <constraint firstItem="qkH-s3-qGx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="vo1-dB-veF"/>
+                            <constraint firstItem="qkH-s3-qGx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="vo1-dB-veF"/>
                             <constraint firstItem="Lnc-HL-HE9" firstAttribute="centerX" secondItem="4gb-OK-zlp" secondAttribute="centerX" id="zLa-1Q-5hx"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.36626285629999999" green="0.77333221839999999" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="rzButtonFadeIn" destination="Ccl-RU-1s4" id="SZj-Tl-z8b"/>
                         <outlet property="rzButtonFadeOut" destination="DeV-KZ-i8V" id="nyP-KZ-dZB"/>
