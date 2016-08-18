@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>RZKit RZKit Example RZKit Example.xcscheme</key>
+		<key>RZKit Example.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C3A537901D6589D200A57B93</key>
+		<key>C3A537C71D658BF200A57B93</key>
 		<dict>
 			<key>primary</key>
 			<true/>

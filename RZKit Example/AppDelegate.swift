@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  RZKit RZKit Example RZKit Example
+//  RZKit Example
 //
 //  Created by Rizbi on 8/18/16.
 //  Copyright © 2016 rzkit. All rights reserved.

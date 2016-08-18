@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:RZKit RZKit Example RZKit Example.xcodeproj">
+      location = "self:RZKit Example.xcodeproj">
    </FileRef>
 </Workspace>
