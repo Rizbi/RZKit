@@ -24,8 +24,9 @@ import UIKit
 
 class RZAnimation
 {
+    private var animating: Bool = false
+    
     var view = UIView()
-    final var animating: Bool = false
     
     var duration: NSTimeInterval = 0.0
     var completionHandler:((RZAnimation)->Void)!
@@ -63,5 +64,10 @@ class RZAnimation
                 self.completionHandler(self)
             }
         }
+    }
+    
+    func isAnimating() -> Bool
+    {
+        return self.animating
     }
 }
