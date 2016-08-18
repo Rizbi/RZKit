@@ -35,10 +35,19 @@ class RZAnimation
         self.duration = duration
     }
     
-    func start() {}
+    func start()
+    {
+        if self.animating {
+            return
+        }
+        
+        self.animating = true
+    }
     
     func end()
     {
+        self.animating = false
+        
         if self.completionHandler != nil {
             self.completionHandler(self)
         }

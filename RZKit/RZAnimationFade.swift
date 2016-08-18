@@ -35,18 +35,12 @@ class RZAnimationFade: RZAnimation
     
     override func start()
     {
-        if self.animating {
-            return
-        }
-        
-        self.animating = true
+        super.start()
         
         UIView.animateWithDuration(self.duration, animations: {
             self.view.alpha = self.to
             
         }) { (success) in
-            
-            self.animating = false
             
             super.end()
         }

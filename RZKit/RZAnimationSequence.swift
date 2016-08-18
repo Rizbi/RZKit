@@ -36,11 +36,7 @@ class RZAnimationSequence: RZAnimation
     
     override func start()
     {
-        if self.animating {
-            return
-        }
-        
-        self.animating = true
+        super.start()
         
         if let anim = self.nextAnimation()
         {
@@ -57,9 +53,7 @@ class RZAnimationSequence: RZAnimation
             anim.start()
         }
         else
-        {
-            self.animating = false
-            
+        {            
             super.end()
         }
     }

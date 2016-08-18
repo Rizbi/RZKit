@@ -31,6 +31,8 @@ class RZAnimationDelay: RZAnimation
     
     override func start()
     {
+        super.start()
+        
         let dispatchTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(self.duration * Double(NSEC_PER_SEC)))
         dispatch_after(dispatchTime, dispatch_get_main_queue(), {
             super.end()

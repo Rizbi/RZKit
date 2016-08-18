@@ -45,11 +45,7 @@ class RZAnimationScale: RZAnimation
     
     override func start()
     {
-        if self.animating {
-            return
-        }
-        
-        self.animating = true
+        super.start()
         
         let frame = self.getNewFrame()
         
@@ -57,8 +53,6 @@ class RZAnimationScale: RZAnimation
             self.view.frame = frame
             
         }) { (success) in
-            
-            self.animating = false
             
             super.end()
         }
