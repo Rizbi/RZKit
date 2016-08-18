@@ -49,7 +49,6 @@ class RZAnimationScale: RZAnimation
             return
         }
         
-        
         self.animating = true
         
         let frame = self.getNewFrame()
@@ -61,12 +60,7 @@ class RZAnimationScale: RZAnimation
             
             self.animating = false
             
-            if success
-            {
-                if self.completionHandler != nil {
-                    self.completionHandler(true)
-                }
-            }
+            super.end()
         }
     }
     

@@ -55,7 +55,7 @@ class ScaleDemoViewController: UIViewController, UITextFieldDelegate
         }
     }
     
-    private func animationFinished(success: Bool)
+    private func animationFinished(anim: RZAnimation)
     {
         self.enableAllButtons(true)
     }

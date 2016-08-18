@@ -76,7 +76,7 @@ class FadeDemoViewController: UIViewController
         }
     }
     
-    private func animationFinished(success: Bool)
+    private func animationFinished(anim: RZAnimation)
     {
         self.enableAllButtons(true)
     }

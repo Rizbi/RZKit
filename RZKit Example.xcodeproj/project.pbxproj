@@ -23,6 +23,7 @@
 		C3A537F01D658C7500A57B93 /* RZVersions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A537E61D658C7500A57B93 /* RZVersions.swift */; };
 		C3A537F11D658C7500A57B93 /* RZView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A537E71D658C7500A57B93 /* RZView.swift */; };
 		C3A537F71D65AC7B00A57B93 /* ScaleDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A537F61D65AC7B00A57B93 /* ScaleDemoViewController.swift */; };
+		C3A537F91D65BC0800A57B93 /* RZAnimationDelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A537F81D65BC0800A57B93 /* RZAnimationDelay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		C3A537F41D658C7C00A57B93 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		C3A537F51D658C7C00A57B93 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		C3A537F61D65AC7B00A57B93 /* ScaleDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleDemoViewController.swift; sourceTree = "<group>"; };
+		C3A537F81D65BC0800A57B93 /* RZAnimationDelay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZAnimationDelay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				C3A537DE1D658C7500A57B93 /* RZAnimation.swift */,
+				C3A537F81D65BC0800A57B93 /* RZAnimationDelay.swift */,
 				C3A537DF1D658C7500A57B93 /* RZAnimationFade.swift */,
 				C3A537E01D658C7500A57B93 /* RZAnimationScale.swift */,
 				C3A537E11D658C7500A57B93 /* RZAnimationSequence.swift */,
@@ -194,6 +197,7 @@
 				C3A537F11D658C7500A57B93 /* RZView.swift in Sources */,
 				C3A537CC1D658BF200A57B93 /* AppDelegate.swift in Sources */,
 				C3A537EE1D658C7500A57B93 /* RZTextField.swift in Sources */,
+				C3A537F91D65BC0800A57B93 /* RZAnimationDelay.swift in Sources */,
 				C3A537EF1D658C7500A57B93 /* RZTextView.swift in Sources */,
 				C3A537EC1D658C7500A57B93 /* RZButton.swift in Sources */,
 				C3A537E81D658C7500A57B93 /* RZAnimation.swift in Sources */,

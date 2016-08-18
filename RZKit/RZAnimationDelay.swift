@@ -22,58 +22,18 @@
 import UIKit
 
 
-class RZAnimationSequence: RZAnimation
+class RZAnimationDelay: RZAnimation
 {
-    private var currentAnimation: Int = 0
-    
-    private var sequence = [RZAnimation]()
-    
-    init(sequence: Array <RZAnimation>)
+    init(delay: NSTimeInterval)
     {
-        super.init()
-        self.sequence = sequence
+        super.init(view: UIView(), duration: delay)
     }
     
     override func start()
     {
-        if self.animating {
-            return
-        }
-        
-        self.animating = true
-        
-        if let anim = self.nextAnimation()
-        {
-            anim.completionHandler = self.animationFinished(_:)
-            anim.start()
-        }
-    }
-    
-    private func animationFinished(anim: RZAnimation)
-    {
-        if let anim = self.nextAnimation()
-        {
-            anim.completionHandler = self.animationFinished(_:)
-            anim.start()
-        }
-        else
-        {
-            self.animating = false
-            
+        let dispatchTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(self.duration * Double(NSEC_PER_SEC)))
+        dispatch_after(dispatchTime, dispatch_get_main_queue(), {
             super.end()
-        }
-    }
-    
-    private func nextAnimation() -> RZAnimation?
-    {
-        if self.currentAnimation < self.sequence.count
-        {
-            let current = self.sequence[self.currentAnimation]
-            self.currentAnimation += 1;
-            
-            return current
-        }
-        
-        return nil
+        })
     }
 }

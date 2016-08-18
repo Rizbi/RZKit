@@ -27,7 +27,7 @@ class RZAnimation
     var view = UIView()
     var animating: Bool = false
     var duration: NSTimeInterval = 0.0
-    var completionHandler:((Bool)->Void)!
+    var completionHandler:((RZAnimation)->Void)!
     
     init(view: UIView = UIView(), duration: NSTimeInterval = 0.0)
     {
@@ -36,4 +36,11 @@ class RZAnimation
     }
     
     func start() {}
+    
+    func end()
+    {
+        if self.completionHandler != nil {
+            self.completionHandler(self)
+        }
+    }
 }

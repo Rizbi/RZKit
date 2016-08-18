@@ -48,12 +48,7 @@ class RZAnimationFade: RZAnimation
             
             self.animating = false
             
-            if success
-            {
-                if self.completionHandler != nil {
-                    self.completionHandler(true)
-                }
-            }
+            super.end()
         }
     }
 }
