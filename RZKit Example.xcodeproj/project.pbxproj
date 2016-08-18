@@ -42,6 +42,10 @@
 		C3A537771D656BA700A57B93 /* RZTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZTextView.swift; sourceTree = "<group>"; };
 		C3A537781D656BA700A57B93 /* RZView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZView.swift; sourceTree = "<group>"; };
 		C3A537821D656DDF00A57B93 /* RZVersions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZVersions.swift; sourceTree = "<group>"; };
+		C3A537841D6585D000A57B93 /* Example1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Example1.jpg; sourceTree = SOURCE_ROOT; };
+		C3A537851D6585D000A57B93 /* Example2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Example2.png; sourceTree = SOURCE_ROOT; };
+		C3A537861D6585DA00A57B93 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		C3A537871D6585DA00A57B93 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,10 @@
 		C3A5375C1D656B6100A57B93 /* RZKit Example */ = {
 			isa = PBXGroup;
 			children = (
+				C3A537841D6585D000A57B93 /* Example1.jpg */,
+				C3A537851D6585D000A57B93 /* Example2.png */,
+				C3A537861D6585DA00A57B93 /* LICENSE */,
+				C3A537871D6585DA00A57B93 /* README.md */,
 				C3A5375D1D656B6100A57B93 /* AppDelegate.swift */,
 				C3A5375F1D656B6100A57B93 /* ViewController.swift */,
 				C3A537611D656B6100A57B93 /* Main.storyboard */,
@@ -336,6 +344,7 @@
 				C3A5376E1D656B6100A57B93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
