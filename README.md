@@ -2,11 +2,11 @@
   - Corner and border can be added in the storyboard.
   - Inset can be added to UILabel in the storyboard.
 
-# Animation of UIView is much easier.
+# Animation of UIView is much easier
   - FadeIn & FadeOut animation support.
   - ZoomIn & ZoomOut animation support.
 
-# Classes:
+# Classe
 RZView, RZLabel, RZTextField, RZTextView, RZAnimation, RZAnimationFade, RZAnimationScale, RZAnimationSequence.
 
 # Storyboard example
@@ -26,4 +26,4 @@ RZView, RZLabel, RZTextField, RZTextView, RZAnimation, RZAnimationFade, RZAnimat
             seq.start()
         }
 
-# Note: Development will be continued.
+* Note: Development will be continued...
