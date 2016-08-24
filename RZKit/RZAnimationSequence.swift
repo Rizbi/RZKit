@@ -38,8 +38,6 @@ class RZAnimationSequence: RZAnimation
     private var sequence = [RZAnimation]()
     private var forwarding: Bool = false
     
-    private var ci: Int = 0
-    
     init(sequence: Array <RZAnimation>)
     {
         super.init()
@@ -56,9 +54,6 @@ class RZAnimationSequence: RZAnimation
     
     private func animationFinished(anim: RZAnimation)
     {
-        anim.view.backgroundColor = ( (ci%2) == 0 ? UIColor.redColor() : UIColor.blueColor())
-        ci += 1;
-        
         if (self.startNextAnimation() == nil)
         {
             if self.shouldRepeat
