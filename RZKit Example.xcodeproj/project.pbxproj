@@ -101,17 +101,17 @@
 		C3A537DD1D658C7500A57B93 /* RZKit */ = {
 			isa = PBXGroup;
 			children = (
+				C3A537E61D658C7500A57B93 /* RZVersions.swift */,
 				C3A537DE1D658C7500A57B93 /* RZAnimation.swift */,
 				C3A537F81D65BC0800A57B93 /* RZAnimationDelay.swift */,
 				C3A537DF1D658C7500A57B93 /* RZAnimationFade.swift */,
 				C3A537E01D658C7500A57B93 /* RZAnimationScale.swift */,
 				C3A537E11D658C7500A57B93 /* RZAnimationSequence.swift */,
-				C3A537E21D658C7500A57B93 /* RZButton.swift */,
+				C3A537E71D658C7500A57B93 /* RZView.swift */,
 				C3A537E31D658C7500A57B93 /* RZLabel.swift */,
+				C3A537E21D658C7500A57B93 /* RZButton.swift */,
 				C3A537E41D658C7500A57B93 /* RZTextField.swift */,
 				C3A537E51D658C7500A57B93 /* RZTextView.swift */,
-				C3A537E61D658C7500A57B93 /* RZVersions.swift */,
-				C3A537E71D658C7500A57B93 /* RZView.swift */,
 			);
 			path = RZKit;
 			sourceTree = "<group>";

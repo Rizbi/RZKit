@@ -21,12 +21,24 @@
 
 import UIKit
 
+enum RZAnimationSequenceRepeatOption: Int
+{
+    case Default = 0
+    case Cycle = 1
+}
 
 class RZAnimationSequence: RZAnimation
 {
-    private var currentAnimation: Int = 0
+    // can be set anytime
+    var shouldRepeat: Bool = false
+    var repeatOption: RZAnimationSequenceRepeatOption = RZAnimationSequenceRepeatOption.Default
     
+    // privatelty used variables
+    private var currentAnimationIndex: Int = 0
     private var sequence = [RZAnimation]()
+    private var forwarding: Bool = false
+    
+    private var ci: Int = 0
     
     init(sequence: Array <RZAnimation>)
     {
@@ -38,32 +50,62 @@ class RZAnimationSequence: RZAnimation
     {
         super.start()
         
-        if let anim = self.nextAnimation()
-        {
-            anim.completionHandler = self.animationFinished(_:)
-            anim.start()
-        }
+        self.forwarding = true
+        self.startNextAnimation()
     }
+    
+    
     
     private func animationFinished(anim: RZAnimation)
     {
-        if let anim = self.nextAnimation()
+        anim.view.backgroundColor = ( (ci%2) == 0 ? UIColor.redColor() : UIColor.blueColor())
+        ci += 1;
+        
+        if (self.startNextAnimation() == nil)
         {
-            anim.completionHandler = self.animationFinished(_:)
-            anim.start()
-        }
-        else
-        {            
-            super.end()
+            if self.shouldRepeat
+            {
+                if (self.repeatOption == RZAnimationSequenceRepeatOption.Default)
+                {
+                    self.forwarding = true
+                    self.currentAnimationIndex = 0;
+                }
+                else if (self.forwarding)
+                {
+                    self.forwarding = false
+                    self.currentAnimationIndex = ((self.sequence.count > 1) ? (self.sequence.count - 2) : 0);
+                }
+                else
+                {
+                    self.forwarding = true
+                    self.currentAnimationIndex = ((self.sequence.count > 1) ? 1 : 0);
+                }                
+                self.startNextAnimation()
+            }
+            else
+            {
+                super.end()
+            }
         }
     }
     
-    private func nextAnimation() -> RZAnimation?
+    private func startNextAnimation() -> RZAnimation?
     {
-        if self.currentAnimation < self.sequence.count
+        if (self.currentAnimationIndex >= 0 && self.currentAnimationIndex < self.sequence.count)
         {
-            let current = self.sequence[self.currentAnimation]
-            self.currentAnimation += 1;
+            let current = self.sequence[self.currentAnimationIndex]
+            
+            current.completionHandler = self.animationFinished(_:)
+            current.start()
+            
+            if self.forwarding
+            {
+                self.currentAnimationIndex += 1;
+            }
+            else
+            {
+                self.currentAnimationIndex -= 1;
+            }
             
             return current
         }

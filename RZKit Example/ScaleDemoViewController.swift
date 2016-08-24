@@ -65,15 +65,12 @@ class ScaleDemoViewController: UIViewController, UITextFieldDelegate
             // Not mandatory!
             self.enableAllButtons(false)
             
-            let scaleDown1 = RZAnimationScale(view: _view, duration: self.getAnimationDuration(), percent: 25.0, anchor: self.anchor)
-            let scaleUp1 = RZAnimationScale(view: _view, duration: self.getAnimationDuration(), percent: 400.0, anchor: self.anchor)
+            let scaleDown = RZAnimationScale(view: _view, duration: self.getAnimationDuration(), percent: 25.0, anchor: self.anchor)
+            let scaleUp = RZAnimationScale(view: _view, duration: self.getAnimationDuration(), percent: 400.0, anchor: self.anchor)
             
-            let delay = RZAnimationDelay(delay: 0.25)
-            
-            let scaleDown2 = RZAnimationScale(view: _view, duration: self.getAnimationDuration(), percent: 25.0, anchor: self.anchor)
-            let scaleUp2 = RZAnimationScale(view: _view, duration: self.getAnimationDuration(), percent: 400.0, anchor: self.anchor)
-            
-            let seq = RZAnimationSequence(sequence: [scaleDown1, scaleUp1, delay, scaleDown2, scaleUp2])
+            let seq = RZAnimationSequence(sequence: [scaleDown, scaleUp])
+            seq.shouldRepeat = true
+            seq.repeatOption = RZAnimationSequenceRepeatOption.Cycle
             seq.completionHandler = self.animationFinished(_:)
             seq.start()
         }
@@ -82,6 +79,7 @@ class ScaleDemoViewController: UIViewController, UITextFieldDelegate
     private func animationFinished(anim: RZAnimation)
     {
         self.enableAllButtons(true)
+        print("Enable");
     }
     
     private func enableAllButtons(enabled: Bool)

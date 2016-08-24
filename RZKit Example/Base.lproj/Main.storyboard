@@ -398,6 +398,7 @@
                         <outlet property="durationField" destination="wRh-68-bvU" id="vcs-JN-OAp"/>
                         <outlet property="rzButtonScaleDown" destination="qAG-lm-vk9" id="OqM-qU-w82"/>
                         <outlet property="rzButtonScaleUp" destination="j7c-Ye-act" id="m4L-Hp-YTh"/>
+                        <outlet property="rzButtonSequence" destination="rQc-Y0-4PU" id="afZ-J9-Rjg"/>
                         <outlet property="rzView" destination="Q07-eo-YNc" id="cCS-OH-LAo"/>
                     </connections>
                 </viewController>
