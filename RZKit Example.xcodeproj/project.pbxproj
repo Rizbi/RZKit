@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C38EB44F1D6DB978007B585A /* MenuTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38EB44E1D6DB978007B585A /* MenuTableController.swift */; };
 		C3A537CC1D658BF200A57B93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A537CB1D658BF200A57B93 /* AppDelegate.swift */; };
 		C3A537CE1D658BF200A57B93 /* FadeDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A537CD1D658BF200A57B93 /* FadeDemoViewController.swift */; };
 		C3A537D11D658BF200A57B93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A537CF1D658BF200A57B93 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C38EB44E1D6DB978007B585A /* MenuTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableController.swift; sourceTree = "<group>"; };
 		C3A537C81D658BF200A57B93 /* RZKit Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RZKit Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A537CB1D658BF200A57B93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3A537CD1D658BF200A57B93 /* FadeDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeDemoViewController.swift; sourceTree = "<group>"; };
@@ -88,12 +90,13 @@
 				C3A537F41D658C7C00A57B93 /* LICENSE */,
 				C3A537F51D658C7C00A57B93 /* README.md */,
 				C3A537CB1D658BF200A57B93 /* AppDelegate.swift */,
-				C3A537CD1D658BF200A57B93 /* FadeDemoViewController.swift */,
-				C3A537F61D65AC7B00A57B93 /* ScaleDemoViewController.swift */,
 				C3A537CF1D658BF200A57B93 /* Main.storyboard */,
-				C3A537D21D658BF200A57B93 /* Assets.xcassets */,
 				C3A537D41D658BF200A57B93 /* LaunchScreen.storyboard */,
 				C3A537D71D658BF200A57B93 /* Info.plist */,
+				C3A537D21D658BF200A57B93 /* Assets.xcassets */,
+				C38EB44E1D6DB978007B585A /* MenuTableController.swift */,
+				C3A537CD1D658BF200A57B93 /* FadeDemoViewController.swift */,
+				C3A537F61D65AC7B00A57B93 /* ScaleDemoViewController.swift */,
 			);
 			path = "RZKit Example";
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3A537E91D658C7500A57B93 /* RZAnimationFade.swift in Sources */,
+				C38EB44F1D6DB978007B585A /* MenuTableController.swift in Sources */,
 				C3A537F01D658C7500A57B93 /* RZVersions.swift in Sources */,
 				C3A537EB1D658C7500A57B93 /* RZAnimationSequence.swift in Sources */,
 				C3A537EA1D658C7500A57B93 /* RZAnimationScale.swift in Sources */,

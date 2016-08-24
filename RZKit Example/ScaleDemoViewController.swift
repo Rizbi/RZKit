@@ -79,7 +79,6 @@ class ScaleDemoViewController: UIViewController, UITextFieldDelegate
     private func animationFinished(anim: RZAnimation)
     {
         self.enableAllButtons(true)
-        print("Enable");
     }
     
     private func enableAllButtons(enabled: Bool)
@@ -117,7 +116,7 @@ class ScaleDemoViewController: UIViewController, UITextFieldDelegate
     }
     
     @IBAction
-    private func setAnchor(sender: RZButton)
+    private func setAnchor(sender: UIBarButtonItem)
     {
         let alertController = UIAlertController(title: "Choose Anchor Point", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
         
@@ -153,6 +152,16 @@ class ScaleDemoViewController: UIViewController, UITextFieldDelegate
         
         let z = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
         alertController.addAction(z)
+        
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.Pad)
+        {
+            if let popover = alertController.popoverPresentationController
+            {
+                popover.barButtonItem = sender
+                popover.sourceView = self.view
+                popover.permittedArrowDirections = UIPopoverArrowDirection.Up
+            }
+        }
         
         self.presentViewController(alertController, animated: true, completion: nil)
     }

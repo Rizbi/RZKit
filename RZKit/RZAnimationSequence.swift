@@ -54,8 +54,6 @@ class RZAnimationSequence: RZAnimation
         self.startNextAnimation()
     }
     
-    
-    
     private func animationFinished(anim: RZAnimation)
     {
         anim.view.backgroundColor = ( (ci%2) == 0 ? UIColor.redColor() : UIColor.blueColor())
